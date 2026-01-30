@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Сообщение</title>
+
+  <!-- Playfair Display с курсивом -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page">
+    <header class="top">
+    </header>
+
+    <main class="grid" id="grid"></main>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" id="backdrop"></div>
+
+    <div class="modal__card" role="dialog" aria-modal="true">
+      <button class="modal__close" id="closeBtn" aria-label="Закрыть">✕</button>
+
+      <!-- PHOTO MODE -->
+      <div class="modal__photo is-active" id="photoMode">
+        <div class="modal__media">
+          <img class="modal__img" id="modalImg" alt="">
+          <div class="modal__overlay">
+            <div class="modal__caption" id="modalCaption"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LETTER MODE -->
+      <div class="modal__letter" id="letterMode">
+        <div class="letter">
+          <div class="letter__title" id="letterTitle"></div>
+          <div class="letter__text" id="letterText"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
